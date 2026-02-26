@@ -1,210 +1,229 @@
-<h4 align="right"><strong>English</strong> | <a href="README_CN.md">简体中文</a></h4>
-<p align="center">
-    <img src=https://gw.alipayobjects.com/zos/k/fa/logo-modified.png width=138/>
-</p>
-<h1 align="center">Pake</h1>
-<p align="center"><strong>Turn any webpage into a desktop app with one command, supports macOS, Windows, and Linux</strong></p>
-<div align="center">
-    <a href="https://twitter.com/HiTw93" target="_blank">
-    <img alt="twitter" src="https://img.shields.io/badge/follow-Tw93-red?style=flat-square&logo=Twitter"></a>
-    <a href="https://t.me/+GclQS9ZnxyI2ODQ1" target="_blank">
-    <img alt="telegram" src="https://img.shields.io/badge/chat-telegram-blueviolet?style=flat-square&logo=Telegram"></a>
-    <a href="https://github.com/tw93/Pake/releases" target="_blank">
-    <img alt="GitHub downloads" src="https://img.shields.io/github/downloads/tw93/Pake/total.svg?style=flat-square"></a>
-    <a href="https://github.com/tw93/Pake/commits" target="_blank">
-    <img alt="GitHub commit" src="https://img.shields.io/github/commit-activity/m/tw93/Pake?style=flat-square"></a>
-    <a href="https://github.com/tw93/Pake/issues?q=is%3Aissue+is%3Aclosed" target="_blank">
-    <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/tw93/Pake.svg?style=flat-square"></a>
-</div>
+# Universal Web-to-App Builder
 
-## Features
+**Build desktop apps from any website on older macOS versions without upgrading**
 
-- 🎐 **Lightweight**: Nearly 20 times smaller than Electron packages, typically around 5M
-- 🚀 **Fast**: Built with Rust Tauri, much faster than traditional JS frameworks with lower memory usage
-- ⚡ **Easy to use**: One-command packaging via CLI or online building, no complex configuration needed
-- 📦 **Feature-rich**: Supports shortcuts, immersive windows, drag & drop, style customization, ad removal
+---
 
-## Getting Started
+## The Problem
 
-- **Beginners**: Download ready-made [Popular Packages](#popular-packages) or use [Online Building](docs/github-actions-usage.md) with no environment setup required
-- **Developers**: Install [CLI Tool](docs/cli-usage.md) for one-command packaging of any website with customizable icons, window settings, and more
-- **Advanced Users**: Clone the project locally for [Custom Development](#development), or check [Advanced Usage](docs/advanced-usage.md) for style customization and feature enhancement
-- **Troubleshooting**: Check [FAQ](docs/faq.md) for common issues and solutions
+[Pake](https://github.com/tw93/Pake) is an amazing Rust-based tool that converts any webpage into a native desktop app - lightweight, fast, and efficient (typically 5-10MB vs 100MB+ Electron apps).
 
-## Popular Packages
+**But there's a catch:**
 
-<table>
-    <tr>
-        <td>WeRead
-            <a href="https://github.com/tw93/Pake/releases/latest/download/WeRead.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/WeRead_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/WeRead_x86_64.deb">Linux</a>
-        </td>
-        <td>Twitter
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Twitter.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Twitter_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Twitter_x86_64.deb">Linux</a>
-        </td>
-    </tr>
-    <tr>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/WeRead.jpg width=600/></td>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/Twitter.jpg width=600/></td>
-    </tr>
-    <tr>
-        <td>Grok
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Grok.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Grok_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Grok_x86_64.deb">Linux</a>
-        </td>
-        <td>DeepSeek
-            <a href="https://github.com/tw93/Pake/releases/latest/download/DeepSeek.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/DeepSeek_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/DeepSeek_x86_64.deb">Linux</a>
-        </td>
-    </tr>
-    <tr>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/Grok.png width=600/></td>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/DeepSeek.png width=600/></td>
-    </tr>
-    <tr>
-        <td>ChatGPT
-            <a href="https://github.com/tw93/Pake/releases/latest/download/ChatGPT.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/ChatGPT_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/ChatGPT_x86_64.deb">Linux</a>
-        </td>
-        <td>Gemini
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Gemini.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Gemini_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Gemini_x86_64.deb">Linux</a>
-        </td>
-    </tr>
-    <tr>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/ChatGPT.png width=600/></td>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/Gemini.png width=600/></td>
-    </tr>
-    <tr>
-      <td>YouTube Music
-            <a href="https://github.com/tw93/Pake/releases/latest/download/YouTubeMusic.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/YouTubeMusic_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/YouTubeMusic_x86_64.deb">Linux</a>
-      </td>
-      <td>YouTube
-            <a href="https://github.com/tw93/Pake/releases/latest/download/YouTube.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/YouTube_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/YouTube_x86_64.deb">Linux</a>
-      </td>
-    </tr>
-    <tr>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/YouTubeMusic.png width=600 /></td>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/YouTube.jpg width=600 /></td>
-    </tr>
-    <tr>
-        <td>LiZhi
-            <a href="https://github.com/tw93/Pake/releases/latest/download/LiZhi.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/LiZhi_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/LiZhi_x86_64.deb">Linux</a>
-        </td>
-        <td>ProgramMusic
-            <a href="https://github.com/tw93/Pake/releases/latest/download/ProgramMusic.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/ProgramMusic_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/ProgramMusic_x86_64.deb">Linux</a>
-        </td>
-    </tr>
-    <tr>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/LiZhi.jpg width=600/></td>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/ProgramMusic.jpg width=600/></td>
-    </tr>
-    <tr>
-        <td>Excalidraw
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Excalidraw.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Excalidraw_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/Excalidraw_x86_64.deb">Linux</a>
-        </td>
-        <td>XiaoHongShu
-            <a href="https://github.com/tw93/Pake/releases/latest/download/XiaoHongShu.dmg">Mac</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/XiaoHongShu_x64.msi">Windows</a>
-            <a href="https://github.com/tw93/Pake/releases/latest/download/XiaoHongShu_x86_64.deb">Linux</a>
-        </td>
-    </tr>
-    <tr>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/Excalidraw.png width=600/></td>
-        <td><img src=https://raw.githubusercontent.com/tw93/static/main/pake/XiaoHongShu.png width=600/></td>
-    </tr>
-</table>
+- **Pake CLI requires macOS 12+ to build apps locally**
+- Many developers, creators, and producers are on Catalina (10.15), Big Sur (11), or older systems
+- The build tools (specifically esbuild and other dependencies) fail on older macOS versions with errors like `Symbol not found: _SecTrustCopyCertificateChain`
 
-<details>
-<summary>🏂 You can download more applications from <a href="https://github.com/tw93/Pake/releases">Releases</a>. <b>Click here to expand the shortcuts reference!</b></summary>
+**This creates an artificial barrier:** people with older hardware can't create the tools they need to improve their workflows.
 
-<br/>
+**But here's the good news:** You don't actually need to upgrade. You just need to build differently.
 
-| Mac                                                       | Windows/Linux                                       | Function                            |
-| --------------------------------------------------------- | --------------------------------------------------- | ----------------------------------- |
-| <kbd>⌘</kbd> + <kbd>[</kbd>                               | <kbd>Ctrl</kbd> + <kbd>←</kbd>                      | Return to the previous page         |
-| <kbd>⌘</kbd> + <kbd>]</kbd>                               | <kbd>Ctrl</kbd> + <kbd>→</kbd>                      | Go to the next page                 |
-| <kbd>⌘</kbd> + <kbd>↑</kbd>                               | <kbd>Ctrl</kbd> + <kbd>↑</kbd>                      | Auto scroll to top of page          |
-| <kbd>⌘</kbd> + <kbd>↓</kbd>                               | <kbd>Ctrl</kbd> + <kbd>↓</kbd>                      | Auto scroll to bottom of page       |
-| <kbd>⌘</kbd> + <kbd>r</kbd>                               | <kbd>Ctrl</kbd> + <kbd>r</kbd>                      | Refresh Page                        |
-| <kbd>⌘</kbd> + <kbd>w</kbd>                               | <kbd>Ctrl</kbd> + <kbd>w</kbd>                      | Hide window, not quit               |
-| <kbd>⌘</kbd> + <kbd>-</kbd>                               | <kbd>Ctrl</kbd> + <kbd>-</kbd>                      | Zoom out the page                   |
-| <kbd>⌘</kbd> + <kbd>=</kbd>                               | <kbd>Ctrl</kbd> + <kbd>=</kbd>                      | Zoom in the Page                    |
-| <kbd>⌘</kbd> + <kbd>0</kbd>                               | <kbd>Ctrl</kbd> + <kbd>0</kbd>                      | Reset the page zoom                 |
-| <kbd>⌘</kbd> + <kbd>L</kbd>                               | <kbd>Ctrl</kbd> + <kbd>L</kbd>                      | Copy Current Page URL               |
-| <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>⌥</kbd> + <kbd>V</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd>   | Paste and Match Style               |
-| <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>                | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>   | Go to Home Page                     |
-| <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>                | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>   | Toggle Developer Tools (Debug Only) |
-| <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>⌫</kbd>                | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> | Clear Cache & Restart               |
+---
 
-In addition, double-click the title bar to switch to full-screen mode. For Mac users, you can also use the gesture to go to the previous or next page and drag the title bar to move the window. The new menu also offers options for navigation, zoom, and window controls.
+## The Solution: GitHub Actions
 
-</details>
+Pake already includes a **GitHub Actions workflow** that builds apps on cloud servers (running macOS 12+). This means:
 
-## Command-Line Packaging
+- ✅ **No local CLI installation needed**
+- ✅ **No macOS upgrade required**
+- ✅ **Works from ANY macOS version** (even Catalina 10.15)
+- ✅ **Finished apps run on macOS 10.15+**
+- ✅ **Completely free** (GitHub Actions is free for public repos)
 
-![Pake](https://raw.githubusercontent.com/tw93/static/main/pake/pake1.gif)
+**You just configure the build in your browser, and GitHub's servers do all the heavy lifting.**
 
-```bash
-# Install Pake CLI
-pnpm install -g pake-cli
+---
 
-# Basic usage - automatically fetches website icon
-pake https://github.com --name GitHub
+## How to Build Your Own Desktop Apps (Step-by-Step)
 
-# Advanced usage with custom options
-pake https://weekly.tw93.fun --name Weekly --icon https://cdn.tw93.fun/pake/weekly.icns --width 1200 --height 800 --hide-title-bar
-```
+### Prerequisites
 
-First-time packaging requires environment setup and may be slower, subsequent builds are fast. For complete parameter documentation, see [CLI Usage Guide](docs/cli-usage.md). Don't want to use CLI? Try [GitHub Actions Online Building](docs/github-actions-usage.md).
+- Any website URL you want to turn into a desktop app
+- That's it.
 
-## Development
+### Step 1: Fork the Pake Repository
 
-Requires Rust `>=1.85` and Node `>=22`. For detailed installation guide, see [Tauri documentation](https://tauri.app/start/prerequisites/). If unfamiliar with development environment, use the CLI tool instead.
+1. Go to the [original Pake repo](https://github.com/tw93/Pake)
+2. Click **Fork** (top right corner)
+3. This creates your own copy of Pake in your GitHub account
 
-```bash
-# Install dependencies
-pnpm i
+### Step 2: Enable GitHub Actions
 
-# Local development [right-click to open debug mode]
-pnpm run dev
+1. In your forked repo, go to the **Actions** tab
+2. You'll see a message: *"Workflows aren't being run on this forked repository"*
+3. Click **"I understand my workflows, go ahead and enable them"**
 
-# Build application
-pnpm run build
-```
+### Step 3: Run the Build Workflow
 
-For style customization, feature enhancement, container communication and other advanced features, see [Advanced Usage Documentation](docs/advanced-usage.md).
+1. In the Actions tab, look at the left sidebar
+2. Click **"Build App With Pake CLI"**
+3. Click the **"Run workflow"** button (top right)
+4. Fill in the form:
 
-## Developers
+**Required Fields:**
+- **Platform**: Select `macos-latest`
+- **Website URL**: The webpage you want to turn into an app (e.g., `https://example.com`)
+- **App name**: Name for your app (e.g., `MyAwesomeApp`)
 
-Pake's development can not be without these Hackers. They contributed a lot of capabilities for Pake. Also, welcome to follow them! ❤️
+**Optional Fields:**
+- **Icon URL**: Leave empty to auto-fetch the website's icon, or provide a custom icon URL
+- **Window width**: Default is `1200` (pixels)
+- **Window height**: Default is `800` (pixels)
+- **Start in fullscreen mode**: Leave unchecked (unless you want fullscreen)
+- **Hide title bar** (macOS only): Check this for a cleaner look
+- **Universal binary** (macOS only): Check this to support both Intel and Apple Silicon Macs
+- **Package formats**: Leave empty for macOS builds (this is for Linux)
 
-<a href="https://github.com/tw93/Pake/graphs/contributors">
-  <img src="./CONTRIBUTORS.svg?v=2" alt="Contributors" width="1000" />
-</a>
+5. Click **"Run workflow"** at the bottom
 
-## Support
+### Step 4: Wait for the Build
 
-<a href="https://miaoyan.app/cats.html?name=Pake"><img src="https://miaoyan.app/assets/sponsors.svg" width="1000px" /></a>
+- The build takes **10-15 minutes**
+- You'll see it appear in the workflow runs list
+- Watch the progress - it'll show green checkmarks as each step completes
 
-1. I have two cats, TangYuan and Coke. If you think Pake delights your life, you can feed them <a href="https://miaoyan.app/cats.html?name=Pake" target="_blank">food 🥩</a>.
-2. If you like Pake, you can star it on GitHub. Also, welcome to [recommend Pake](https://twitter.com/intent/tweet?url=https://github.com/tw93/Pake&text=Pake%20-%20Turn%20any%20webpage%20into%20a%20desktop%20app%20with%20one%20command.%20Nearly%2020x%20smaller%20than%20Electron%20packages,%20supports%20macOS%20Windows%20Linux) to your friends.
-3. You can follow my [Twitter](https://twitter.com/HiTw93) to get the latest news of Pake or join our [Telegram](https://t.me/+GclQS9ZnxyI2ODQ1) chat group.
-4. I hope that you enjoy playing with it. Let us know if you find a website that would be great for a Mac App!
+### Step 5: Download Your App
+
+1. Click on the completed workflow run (green checkmark)
+2. Scroll to the bottom - look for the **"Artifacts"** section
+3. Click on your app file (e.g., `MyAwesomeApp-macOS`)
+4. It downloads as a .zip file
+
+### Step 6: Install and Use
+
+1. Unzip the downloaded file
+2. Open the `.dmg` file
+3. Drag the app to your Applications folder
+4. Launch from Applications
+   - **First launch:** Right-click → Open (to bypass macOS security warning)
+   - **If it still blocks you:** Go to System Preferences → Privacy & Security → Click "Open Anyway"
+5. Add to your Dock for quick access (right-click app icon → Options → Keep in Dock)
+
+**That's it. You just built a desktop app on GitHub's cloud servers. Your old Mac didn't hold you back.**
+
+---
+
+## Real-World Example
+
+I'm a music producer and sound engineer on macOS Catalina 10.15. I built **[TunebatAnalyzer](https://github.com/NinoSantino/Pake/releases)** - a desktop app for analyzing BPM and key of beats/instrumentals - using this exact method.
+
+**Settings I used:**
+- Platform: `macos-latest`
+- URL: `https://tunebat.com/Analyzer`
+- Name: `TunebatAnalyzer`
+- Window: `1200x800`
+- Hide title bar: ✅
+- Universal binary: ✅
+
+**Result:** A 9MB native macOS app that I use daily before recording sessions, built entirely on GitHub's servers.
+
+---
+
+## What Can You Build?
+
+**Turn websites that DON'T have desktop apps into native macOS applications.**
+
+### Good Use Cases:
+- **Web tools you use daily** that only exist in browsers
+- **Internal company dashboards** or admin panels
+- **Niche tools** without official desktop versions
+- **Custom web apps** you've built
+- **Documentation sites** you reference constantly
+- **Web-based calculators or analyzers** (like Tunebat)
+- **Monitoring dashboards** for servers, analytics, etc.
+- **Any browser-based workflow** you want quick dock access to
+
+**If you're constantly opening a browser tab for something, turn it into an app instead.**
+
+---
+
+## Why Use Pake Instead of Electron?
+
+| Feature | Pake (Tauri/Rust) | Electron |
+|---------|-------------------|----------|
+| **App Size** | ~5-10MB | 100-200MB+ |
+| **Memory Usage** | Low | High |
+| **Startup Speed** | Fast | Slower |
+| **Technology** | Rust + native webview | Chromium + Node.js |
+| **Performance** | Native | Heavier |
+
+**Pake apps are 20x smaller and way more efficient.**
+
+---
+
+## Troubleshooting
+
+### "Build failed" - Check the logs
+- Click on the failed workflow run
+- Click on the "build" job
+- Read the error message
+- Common issues: invalid URL, incorrect settings, network timeout
+
+### "Security warning when opening app"
+- Right-click the app → Open (instead of double-clicking)
+- macOS will ask for confirmation - click "Open"
+- If it still blocks you: Go to System Preferences → Privacy & Security → Click "Open Anyway"
+- This only happens on first launch
+
+### "App won't run on my Mac"
+- Make sure you're on macOS 10.15 (Catalina) or later
+- If you selected Intel-only build, it won't work on Apple Silicon (and vice versa)
+- Use "Universal binary" option to support both
+
+### "Workflow not showing up"
+- Make sure you enabled GitHub Actions in your fork
+- Check that you forked the main Pake repo, not someone else's fork
+
+---
+
+## System Requirements
+
+**To BUILD apps (using GitHub Actions):**
+- Any macOS version (even 10.15 Catalina)
+- Internet connection
+
+**To RUN the finished apps:**
+- macOS 10.15 (Catalina) or later
+- Intel or Apple Silicon Mac (use Universal binary for compatibility)
+
+---
+
+## Philosophy
+
+Not everyone has the latest hardware, and that shouldn't stop anyone from building useful tools.
+
+This guide exists because I believe **technology should be accessible to everyone**, regardless of the age of their equipment. If you're a developer, creator, producer, or just someone who wants a better workflow - you deserve to build the tools you need.
+
+**Your old Mac is still powerful. Don't let arbitrary system requirements tell you otherwise.**
+
+---
+
+## Contributing
+
+Found a better way to do this? Have suggestions? Want to add examples?
+
+- Open an issue
+- Submit a pull request
+- Share your own apps built with this method
+
+Let's make this resource better together.
+
+---
+
+## Credits
+
+- **Pake**: Built by [tw93](https://github.com/tw93/Pake) - the real hero here
+- **Tauri**: The Rust framework that makes Pake possible
+- **This guide**: Created by someone tired of being told their Mac is "too old"
+
+---
+
+## Examples Built With This Method
+
+- [TunebatAnalyzer](https://github.com/NinoSantino/universal-web-to-app-builder) - Audio analysis tool for music producers
+
+*Want your app listed here? Open an issue with a link to your release!*
+
+---
+
+**Built with Pake | Powered by Tauri & Rust | Accessible to everyone with an older Mac**
