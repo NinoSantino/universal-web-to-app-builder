@@ -50,7 +50,7 @@ Pake already includes a **GitHub Actions workflow** that builds apps on cloud se
 ### Step 2: Enable GitHub Actions
 
 1. In your forked repo, go to the **Actions** tab
-2. You'll see a message: *"Workflows aren't being run on this forked repository"*
+2. You'll see a message: _"Workflows aren't being run on this forked repository"_
 3. Click **"I understand my workflows, go ahead and enable them"**
 
 ### Step 3: Run the Build Workflow
@@ -61,11 +61,13 @@ Pake already includes a **GitHub Actions workflow** that builds apps on cloud se
 4. Fill in the form:
 
 **Required Fields:**
+
 - **Platform**: Select `macos-latest`
 - **Website URL**: The webpage you want to turn into an app (e.g., `https://example.com`)
 - **App name**: Name for your app (e.g., `MyAwesomeApp`)
 
 **Optional Fields:**
+
 - **Icon URL**: Leave empty to auto-fetch the website's icon, or provide a custom icon URL
 - **Window width**: Default is `1200` (pixels)
 - **Window height**: Default is `800` (pixels)
@@ -108,6 +110,7 @@ Pake already includes a **GitHub Actions workflow** that builds apps on cloud se
 I'm a music producer and sound engineer on macOS Catalina 10.15. I built **[TunebatAnalyzer](https://github.com/NinoSantino/Pake/releases)** - a desktop app for analyzing BPM and key of beats/instrumentals - using this exact method.
 
 **Settings I used:**
+
 - Platform: `macos-latest`
 - URL: `https://tunebat.com/Analyzer`
 - Name: `TunebatAnalyzer`
@@ -124,6 +127,7 @@ I'm a music producer and sound engineer on macOS Catalina 10.15. I built **[Tune
 **Turn websites that DON'T have desktop apps into native macOS applications.**
 
 ### Good Use Cases:
+
 - **Web tools you use daily** that only exist in browsers
 - **Internal company dashboards** or admin panels
 - **Niche tools** without official desktop versions
@@ -139,13 +143,13 @@ I'm a music producer and sound engineer on macOS Catalina 10.15. I built **[Tune
 
 ## Why Use Pake Instead of Electron?
 
-| Feature | Pake (Tauri/Rust) | Electron |
-|---------|-------------------|----------|
-| **App Size** | ~5-10MB | 100-200MB+ |
-| **Memory Usage** | Low | High |
-| **Startup Speed** | Fast | Slower |
-| **Technology** | Rust + native webview | Chromium + Node.js |
-| **Performance** | Native | Heavier |
+| Feature           | Pake (Tauri/Rust)     | Electron           |
+| ----------------- | --------------------- | ------------------ |
+| **App Size**      | ~5-10MB               | 100-200MB+         |
+| **Memory Usage**  | Low                   | High               |
+| **Startup Speed** | Fast                  | Slower             |
+| **Technology**    | Rust + native webview | Chromium + Node.js |
+| **Performance**   | Native                | Heavier            |
 
 **Pake apps are 20x smaller and way more efficient.**
 
@@ -154,23 +158,27 @@ I'm a music producer and sound engineer on macOS Catalina 10.15. I built **[Tune
 ## Troubleshooting
 
 ### "Build failed" - Check the logs
+
 - Click on the failed workflow run
 - Click on the "build" job
 - Read the error message
 - Common issues: invalid URL, incorrect settings, network timeout
 
 ### "Security warning when opening app"
+
 - Right-click the app → Open (instead of double-clicking)
 - macOS will ask for confirmation - click "Open"
 - If it still blocks you: Go to System Preferences → Privacy & Security → Click "Open Anyway"
 - This only happens on first launch
 
 ### "App won't run on my Mac"
+
 - Make sure you're on macOS 10.15 (Catalina) or later
 - If you selected Intel-only build, it won't work on Apple Silicon (and vice versa)
 - Use "Universal binary" option to support both
 
 ### "Workflow not showing up"
+
 - Make sure you enabled GitHub Actions in your fork
 - Check that you forked the main Pake repo, not someone else's fork
 
@@ -179,10 +187,12 @@ I'm a music producer and sound engineer on macOS Catalina 10.15. I built **[Tune
 ## System Requirements
 
 **To BUILD apps (using GitHub Actions):**
+
 - Any macOS version (even 10.15 Catalina)
 - Internet connection
 
 **To RUN the finished apps:**
+
 - macOS 10.15 (Catalina) or later
 - Intel or Apple Silicon Mac (use Universal binary for compatibility)
 
@@ -222,7 +232,7 @@ Let's make this resource better together.
 
 - [TunebatAnalyzer](https://github.com/NinoSantino/universal-web-to-app-builder) - Audio analysis tool for music producers
 
-*Want your app listed here? Open an issue with a link to your release!*
+_Want your app listed here? Open an issue with a link to your release!_
 
 ---
 
